@@ -1,0 +1,41 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:brick"
+    },
+    "title": "Fuggedaboudit",
+    "description": "Reset a Villager's Trades with a Brick",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "minecraft:nether/root",
+  "criteria": {
+    "l": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "player": {
+          "flags": {
+            "is_sneaking": true
+          },
+          "equipment": {
+            "mainhand": {
+              "items": "minecraft:brick"
+            }
+          }
+        },
+        "entity": {
+          "type": "minecraft:villager",
+          "effects": {
+            "minecraft:slowness": {}
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "l"
+    ]
+  ]
+}
